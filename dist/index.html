@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script id="player-template" type="text/x-handlebars">
+    {{#each players}}
+    <div class="player" data-id="{{id}}" >
+        <p>{{fName}} {{lName}}</p>
+        <p>{{jersey}}</p>
+        <img src="{{img}}" class="p-image" alt="Image not found">
+        <p>{{position}}</p>
+        <button class="add-dream">Add to dream team</button>
+    </div>
+    {{/each}}
+    
+    </script>
+
+
+
+
+    <div id="search">
+        <input id="search-team"type="text">
+        <button id="submit">Search</button>
+        <button id="dream">Dream team</button>
+    </div>
+    <div id="container"></div>
+
+
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
